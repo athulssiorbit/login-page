@@ -38,4 +38,8 @@ const RoundIconButtons = styled.button`
     height: 1.3rem;
     width: 1.3rem;
   }
+
+  &hover:{
+    cursor:pointer;
+  }
 `;

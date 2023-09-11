@@ -2,8 +2,17 @@ import React from "react";
 import { styled } from "styled-components";
 import HorizontalDividerWithText from "./Divder";
 import RoundedButtons from "./RoundedButtons";
+import { useNavigate } from "react-router-dom";
+import { LoginButtons } from "../Designs";
 
 const SignInForm = () => {
+
+  const nav = useNavigate()
+  const handleSignIn = () => {
+    //After successfull login
+    nav("/home")
+  }
+
   return (
     <SignInFormMainContainer>
       <SignInformCont>
@@ -19,7 +28,7 @@ const SignInForm = () => {
           <CheckBox type="checkbox" name="" id="" />
           Keep me signed in
         </label>
-        <SignInButton>Sign in</SignInButton>{" "}
+        <SignInButton onClick={handleSignIn}>Sign in</SignInButton>{" "}
         <HorizontalDividerWithText text="Or Sign In With" />
         <LoginButtons>
           <RoundedButtons link="#google" icon="google_icon" />
@@ -70,10 +79,10 @@ const SignInformCont = styled.div`
   }
 `;
 
-const LoginButtons = styled.div`
-  display: flex;
-  gap: 1rem;
-`;
+// const LoginButtons = styled.div`
+//   display: flex;
+//   gap: 1rem;
+// `;
 
 const SignInButton = styled.button`
   width: 17.5rem;

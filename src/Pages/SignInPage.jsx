@@ -8,7 +8,7 @@ const SignInPage = () => {
     <MainSignInContainer>
       <SignInForm />
       <IllustrationContainer>
-        <img src={illustration} alt="" srcset="" />
+        <img src={illustration} alt=""/>
       </IllustrationContainer>
     </MainSignInContainer>
   );

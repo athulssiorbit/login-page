@@ -1,4 +1,5 @@
 import React from 'react'
+import { Routes, Route } from "react-router-dom";
 import SignInPage from './Pages/SignInPage'
 import HomePage from './Pages/HomePage'
 import { styled } from 'styled-components'
@@ -6,8 +7,12 @@ import { styled } from 'styled-components'
 const App = () => {
   return (
     <MainContainer className='apppp'>
-      {/* <SignInPage /> */}
-      <HomePage />
+      <Routes>
+        <Route path="/" element={<SignInPage />} />
+        <Route path="/home" element={<HomePage />} />
+        {/* <SignInPage /> */}
+
+      </Routes>
     </MainContainer>
   )
 }
