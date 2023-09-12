@@ -16,6 +16,7 @@ const SignInForm = () => {
   return (
     <SignInFormMainContainer>
       <SignInformCont>
+       
         <HeaderContainer>
         <h3>Sign in</h3>
           <p>
@@ -106,6 +107,7 @@ const TextBox = styled.input`
 
   &::placeholder {
     font-size: 1rem;
+    font-weight:600;
     color: var(--primary-color);
   }
 `;
